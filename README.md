@@ -6,10 +6,12 @@ Authentication with 24 Hrs timeout Token Generation
 
 API's
 
-|No| API | Body | Authorization |
-|--|------------|-------------------------------------|------------------------|
-|1 | users/new | {"user":"ps","password":"rs123"} | |
-|2 | login | {"user":"ps","password":"rs123"} | |
-|3 | profile | {"user":"ps","password":"rs123"} | "auth-token" : "" |
-|4 | allusers | | |
-|5 | alltokens | | |
+|No| API | Body | Authorization | Response |
+|--|------------|-------------------------------------|------------------------|----------------|
+|1 | users/new | {"user":"ps","password":"rs123"} | |{"success": "user ** added"} , {"fail": "user not added"} |
+|2 | login | {"user":"ps","password":"rs123"} | |{"login": "success", "auth-token": ""} , {"login": "fail"} |
+|3 | profile | {"user":"ps"} | "auth-token" : "" |{"user ": u + " profile"} , {"user ": u + " unauthorized"} |
+|4 | all | | |{"allusers": allusers} |
+|5 | alltokens | | |{"alltokens": tokens} |
+|6 | / | | |{"Hello": "World"} |
+|7 | /users | {"user":"ps"} | "auth-token" : "" |{"user": ""} , {"NA"} |
