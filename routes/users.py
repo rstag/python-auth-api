@@ -32,5 +32,6 @@ async def register(req: Request):
     if "user" in req and "password" in req:
             t = {"user": req["user"], "password": req["password"]}
             allusers.append(t)
+            print(allusers)
             return {"success": "user added"}
     return {"fail": "user not added"}
