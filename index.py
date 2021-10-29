@@ -25,6 +25,7 @@ async def login(req: Request):
     global allusers
     req = await req.json()
     t = req["user"]
+    print(allusers)
     for tp in allusers:
         if tp["user"] == t:
             auth_t = await createauth(t)
@@ -69,11 +70,13 @@ async def createauth(x):
 
 @app.post("/profile")
 async def profile(req: Request):
+    global allusers
     head = req.headers["auth-token"]
     # print(head)
     u_data = await req.json()
     u = u_data["user"]
     t = await checkauthtime(head, u)
+    print(allusers)
     if t:
         return {"user ": u + " profile"}
     else:
