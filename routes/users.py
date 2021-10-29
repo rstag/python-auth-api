@@ -28,10 +28,12 @@ async def profile(req: Request):
 @users.post("/new")
 async def register(req: Request):
     global allusers
+    p=allusers
     req = await req.json()
     if "user" in req and "password" in req:
             t = {"user": req["user"], "password": req["password"]}
-            allusers.append(t)
+            p.append(t)
+            allusers=p
             print(allusers)
-            return {"success": "user added"}
+            return {"success": "user " + req["user"] + " added"}
     return {"fail": "user not added"}
