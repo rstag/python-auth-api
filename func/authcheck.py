@@ -28,4 +28,5 @@ async def updateoldtk(x, c):
                 updated = True
     if not updated:
         tokens += [{x: c}]
+    print(tokens)
     return tokens
