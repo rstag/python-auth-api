@@ -31,6 +31,11 @@ async def login(req: Request):
             return {"login": "success", "auth-token": auth_t}
     return {"login": "fail"}
 
+@users.get("/alltokens")
+async def profile(req: Request):
+    global tokens
+    return {"alltokens": tokens}
+
 
 async def createauth(x):
     # global tokens
@@ -41,7 +46,7 @@ async def createauth(x):
             string.ascii_uppercase + string.digits + string.ascii_lowercase + "#$%_-+"
         )
     t = time.time()
-    t = t + 60 * 60 * 24  # 24 Hours token timeout (ss * mm * hh)
+    t = t + (60*60*24)  # 24 Hours token timeout (ss * mm * hh)
     # t=t+60*1    # 1 minute token timeout
     t = str(int(t))
     # print(t)
