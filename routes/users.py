@@ -19,6 +19,12 @@ async def profile(req: Request):
         return {"NA"}
 
 
+@users.get("/all")
+async def profile(req: Request):
+    global allusers
+    return {"allusers": allusers}
+
+
 @users.post("/new")
 async def register(req: Request):
     global allusers
