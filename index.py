@@ -31,7 +31,7 @@ async def login(req: Request):
             return {"login": "success", "auth-token": auth_t}
     return {"login": "fail"}
 
-@users.get("/alltokens")
+@app.get("/alltokens")
 async def profile(req: Request):
     global tokens
     return {"alltokens": tokens}
