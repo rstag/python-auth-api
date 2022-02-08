@@ -1,8 +1,14 @@
-# python-auth-api
+# Python-Auth-API
 
 **[Git Hub](https://github.com/rstag/python-auth-api)**
 
-https://python-api-auth.herokuapp.com/
+The main purpose of this application is to provide the authentication services like OAuth, it is an authentication protocol
+that allows you to approve one application interacting with another on your behalf without giving away your password
+and authentication with 24 Hrs session timeout, Token Generation. 
+
+Technology used - **python3**
+
+Live Application - https://python-api-auth.herokuapp.com/
 
 Authentication with 24 Hrs timeout Token Generation 
 
