@@ -17,7 +17,7 @@ app = FastAPI()
 
 @app.get("/")
 async def home():
-    return {"Hello": "World"}
+    return {"Read Me": "https://github.com/rstag/python-auth-api"}
 
 
 @app.post("/login")
