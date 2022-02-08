@@ -15,5 +15,5 @@ API's
 |3 | profile | {"user":"ps"} | "auth-token" : "" |{"user ": u + " profile"} , {"user ": u + " unauthorized"} |
 |4 | all | | |{"allusers": allusers} |
 |5 | alltokens | | |{"alltokens": tokens} |
-|6 | / | | |{"Hello": "World"} |
+|6 | / | | |{"Read Me": "https://github.com/rstag/python-auth-api"} |
 |7 | /users | {"user":"ps"} | "auth-token" : "" |{"user": ""} , {"NA"} |
